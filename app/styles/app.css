@@ -1,0 +1,36 @@
+
+#ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul>li {
+    float: left;
+}
+
+ul>li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul > li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #0C477F;
+}
+
+
+
+.jumbotron{
+  background-image: url(https://etgeekera.files.wordpress.com/2016/05/clash-royale-banner.jpg);
+  background-size: cover;
+  padding: 100px;
+}

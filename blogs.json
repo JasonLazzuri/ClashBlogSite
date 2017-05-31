@@ -1,0 +1,14 @@
+{ "blogs": [{
+    "author": "Veruca Salt",
+    "blogpost": "San Francisco",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg"
+  }, {
+    "author": "Veruca Salt",
+    "blogpost": "San Francisco",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg"
+  }, {
+    "author": "Veruca Salt",
+    "blogpost": "San Francisco",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg"
+  }]
+}

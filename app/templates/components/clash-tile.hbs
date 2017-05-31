@@ -1,0 +1,8 @@
+<li>
+  {{#link-to 'blog' blog.id}}{{blog.author}}'s BlogPost{{/link-to}}
+  {{#if isImageShowing}}
+    <p><img src={{blog.image}} {{action 'imageHide'}}></p>
+  {{else}}
+    <button {{action 'imageShow'}}>Image</button>
+  {{/if}}
+</li>

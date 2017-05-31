@@ -14,7 +14,14 @@ module.exports = function(environment) {
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
-      }
+        }
+      },
+      firebase: {
+        apiKey: "AIzaSyD29lDKzVKjkzLzAIvAZsY8OmGLkq9cgoE",
+        authDomain: "clash-b4311.firebaseapp.com",
+        databaseURL: "https://clash-b4311.firebaseio.com",
+        storageBucket: "clash-b4311.appspot.com",
+
     },
 
     APP: {

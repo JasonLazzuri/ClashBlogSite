@@ -1,0 +1,10 @@
+
+<h2>Post a Blog about Clash Royale:</h2>
+
+<ul>
+  {{#each model as |blog|}}
+    {{clash-tile blog=blog}}
+  {{/each}}
+</ul>
+
+{{new-blog saveBlog2="saveBlog3"}}
