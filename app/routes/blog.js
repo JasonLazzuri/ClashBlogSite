@@ -15,8 +15,27 @@ export default Ember.Route.extend({
         this.transitionTo('index');
       },
       destroyBlog(blog) {
-        blog.destroyRecord();
+        var review_deletions = blog.get('reviews').map(function(review) {
+          return review.destroyRecord();
+        });
+        Ember.RSVP.all(review_deletions).then(function() {
+          return blog.destroyRecord();
+        });
         this.transitionTo('index');
-      }
+      },
+      destroyReview(review) {
+        review.destroyRecord();
+        this.transitionTo('index');
+      },
+      saveReview(params) {
+        console.log(params)
+       var newReview = this.store.createRecord('review', params);
+       var blog = params.blog;
+       blog.get('reviews').addObject(newReview);
+       newReview.save().then(function() {
+         return blog.save();
+       });
+       this.transitionTo('blog', blog);
+     }
     }
   });

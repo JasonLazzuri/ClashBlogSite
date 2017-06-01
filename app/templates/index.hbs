@@ -2,9 +2,18 @@
 <h2>Post a Blog about Clash Royale:</h2>
 
 <ul>
-  {{#each model as |blog|}}
+  {{#each model.blogs as |blog|}}
     {{clash-tile blog=blog}}
   {{/each}}
 </ul>
 
 {{new-blog saveBlog2="saveBlog3"}}
+
+
+<h2> All Reviews </h2>
+
+<ul>
+  {{#each model.reviews as |review|}}
+    <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
+  {{/each}}
+</ul>

@@ -3,4 +3,13 @@ Author:{{blog.author}} <br>
 <br>
 <p><img src={{blog.image}} ></p>
 
+<h2> Reviews </h2>
+
+<ul>
+  {{#each blog.reviews as |review|}}
+    {{review-tile review=review destroyReview="destroyReview" }}
+  {{/each}}
+</ul>
+
+
 <button {{action 'delete' blog}}>Delete Blog</button>
