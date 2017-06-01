@@ -27,8 +27,16 @@ export default Ember.Route.extend({
         review.destroyRecord();
         this.transitionTo('index');
       },
+      update(review, params) {
+        Object.keys(params).forEach(function(key) {
+          if(params[key]!==undefined) {
+            review.set(key,params[key]);
+          }
+        });
+        review.save();
+        this.transitionTo('index');
+      },
       saveReview(params) {
-        console.log(params)
        var newReview = this.store.createRecord('review', params);
        var blog = params.blog;
        blog.get('reviews').addObject(newReview);

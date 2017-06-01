@@ -7,7 +7,7 @@ Author:{{blog.author}} <br>
 
 <ul>
   {{#each blog.reviews as |review|}}
-    {{review-tile review=review destroyReview="destroyReview" }}
+    {{review-tile review=review update="update" destroyReview="destroyReview" }}
   {{/each}}
 </ul>
 

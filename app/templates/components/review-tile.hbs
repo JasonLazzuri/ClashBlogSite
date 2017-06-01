@@ -1,3 +1,5 @@
 <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
 
+{{update-review review=review update="update"}}
+
 <button {{action 'delete' review}}>Delete Review</button>
